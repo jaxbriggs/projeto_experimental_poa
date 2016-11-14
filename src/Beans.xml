@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+	
+	<aop:aspectj-autoproxy/>
+   
+   <!--=========================================BEANS=========================================-->
+	   <!-- Definition for business unit bean -->
+	   <bean id="businessUnit" class="br.edu.fatecpg.carlos.aop.BusinessUnit"></bean>
+	   
+	   <!-- Definition for business unit factory bean -->
+	   <bean id="businessUnitFactory" class="br.edu.fatecpg.carlos.aop.BusinessUnitFactory"></bean>
+	   
+	   <!-- Definition for business unit service bean -->
+	   <bean id="businessUnitService" class="br.edu.fatecpg.carlos.aop.BusinessUnitService"></bean>
+	   
+	   
+	   <!-- Definition for employee bean -->
+	   <bean id="employee" class="br.edu.fatecpg.carlos.aop.Employee"></bean>
+	   
+	   <!-- Definition for employee factory bean -->
+	   <bean id="employeeFactory" class="br.edu.fatecpg.carlos.aop.EmployeeFactory"></bean>
+	   
+	   <!-- Definition for employee service bean -->
+	   <bean id="employeeService" class="br.edu.fatecpg.carlos.aop.EmployeeService"></bean>
+	   
+	   
+	   <!-- Definition for manager bean -->
+	   <bean id="manager" class="br.edu.fatecpg.carlos.aop.Manager"></bean>
+	   
+	   <!-- Definition for manager service bean -->
+	   <bean id="managerFactory" class="br.edu.fatecpg.carlos.aop.ManagerFactory"></bean>
+	   
+	   <!-- Definition for manager service bean -->
+	   <bean id="managerService" class="br.edu.fatecpg.carlos.aop.ManagerService"></bean>
+	   
+   
+   <!--=========================================ASPECTS=========================================-->
+   <!-- Definition for buffered file reader aspect -->
+   <bean id="bufferedFileReaderAspect" class="br.edu.fatecpg.carlos.aop.aspectos.BufferedFileReaderAspect"/>
+   
+   <!-- Definition for business unit persistence aspect -->
+   <bean id="businessUnitPersistenceAspect" class="br.edu.fatecpg.carlos.aop.aspectos.BusinessUnitPersistenceAspect"/>
+   
+   <!-- Definition for employee persistence aspect -->
+   <bean id="employeePersistenceAspect" class="br.edu.fatecpg.carlos.aop.aspectos.EmployeePersistenceAspect"/>
+   
+   <!-- Definition for manager persistence aspect -->
+   <bean id="managerPersistenceAspect" class="br.edu.fatecpg.carlos.aop.aspectos.ManagerPersistenceAspect"/>
+   
+   <!-- Definition for logging aspect -->
+   <bean id="loggingAspect" class="br.edu.fatecpg.carlos.aop.aspectos.LoggingAspect"/>
+
+</beans>
